@@ -4,17 +4,6 @@ import { ColorInput } from './ColorInput'
 
 export const ColorBubblesApp = () => {
 
-  const [colorVar, setColorVar ] = useState('#558581')
-
-  document.documentElement.style.setProperty('--bubble-color', colorVar);
-  
-  const changeColorVar = (colorInput) => {
-    setColorVar(colorInput);
-    
-  }
-
-  
-
   return (
     <>
       <header>
