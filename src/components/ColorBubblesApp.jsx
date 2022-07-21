@@ -22,7 +22,7 @@ export const ColorBubblesApp = () => {
         <p>Aquí podras escoger el color de la burbuja principal y a través de useEffect verás unas animaciones especiales</p>
       </header>
       <Bubble />
-      <ColorInput colour={ changeColorVar }/>
+      <ColorInput />
         
     </>
   )

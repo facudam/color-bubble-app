@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 
-export const ColorInput = ({ colour }) => {
+export const ColorInput = () => {
 
     const [ color, setColor ] = useState('#558581')
 
+    document.documentElement.style.setProperty('--bubble-color', color);
+
     const changeInputColor = (e) => {
         let colorValue = e.target.value;
-        setColor(colorValue);
-        colour(color)
+        setColor(colorValue); 
     }
 
 
