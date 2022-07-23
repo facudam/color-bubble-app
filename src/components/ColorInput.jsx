@@ -3,15 +3,20 @@ import { BubblesContainer } from './BubblesContainer';
 
 export const ColorInput = () => {
 
-  let numeroActivo = false;
-
     const [ color, setColor ] = useState('#558581');
     const [ clikeado, setClickeado ] = useState(0);
 
+    const [ containerIsActive, setContainerIsActive ] = useState(false);
+
+   
+
     useEffect(() => {
     console.log(`UseEffect ejecutado, ${clikeado}`)
+    const modificarState = setTimeout(() => {
+      setContainerIsActive(false)
+    },5000)
     
-  }, [clikeado])
+  }, [ clikeado ])
 
     document.documentElement.style.setProperty('--bubble-color', color);
 
@@ -19,7 +24,8 @@ export const ColorInput = () => {
         let colorValue = e.target.value;
         setColor(colorValue);
         setClickeado( clikeado + 1 );
-        numeroActivo = true;
+        setContainerIsActive(true)
+        
     }
 
 
@@ -30,10 +36,9 @@ export const ColorInput = () => {
             type='color' 
             value={ color }
             onInput={ changeInputColor}
-        />
-
+        /> 
         {
-          numeroActivo ? <BubblesContainer /> : ''
+          containerIsActive ? <BubblesContainer /> : null
         }
         
         
