@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { Bubble } from './Bubble'
 import { ColorInput } from './ColorInput'
 
 export const ColorBubblesApp = () => {
-
+  
   return (
     <>
       <header>

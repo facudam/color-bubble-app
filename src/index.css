@@ -44,10 +44,93 @@ p {
 
 
 .input-container {
-  
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 25px;
 }
+
+.transparent-bubble {
+  width: 400px;
+  height: 400px;
+  outline: 10px solid var(--bubble-color);
+  background-color: var(--bubble-color);
+  border-radius: 50%;
+  position: absolute;
+  animation: bubblesMove 4s ease-in-out forwards ;
+  opacity: .3;
+  
+}
+
+.bubble-translate {
+  width: 200px;
+  height: 200px;
+  outline: 10px solid var(--bubble-color);
+  background-color: var(--bubble-color);
+  border-radius: 50%;
+  position: absolute;
+  animation: otherBubblesMove 5s ease-in-out forwards ;
+  opacity: .3;
+}
+
+.other-translate {
+  width: 600px;
+  height: 600px;
+  outline: 10px solid var(--bubble-color);
+  background-color: var(--bubble-color);
+  border-radius: 50%;
+  position: absolute;
+  animation: anotherBubblesMove 5s ease-in-out forwards ;
+  opacity: .3;
+}
+
+@keyframes bubblesMove {
+
+  0% {
+    top: 1550%;
+    left: 0%;
+    opacity: .1;
+  }
+
+  100% {
+    top: -4500%;
+    left: 0%;
+    opacity: 1;
+  }
+  
+}
+
+@keyframes otherBubblesMove {
+  0% {
+    top: 1950%;
+    left: 50%;
+    opacity: .1;
+    width: 200px;
+    height: 200px;
+  }
+
+  100% {
+    top: -4500%;
+    left: 50%;
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes anotherBubblesMove {
+  0% {
+    top: 1550%;
+    right: 0%;
+    opacity: .1;
+  }
+
+  100% {
+    top: -6500%;
+    right: 0%;
+    opacity: 1;
+  } 
+}
+
